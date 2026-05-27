@@ -6,18 +6,67 @@ import { SITE } from "@/lib/site";
 
 const barbers = [
   {
-    name: "Dionis",
+    name: "Dionis Lopez",
     role: "Master Barber · Founder",
     quote: "Cada corte cuenta una historia. Mi trabajo es escribirla bien.",
     img: "https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?auto=format&fit=crop&w=1400&q=85",
     specialty: "Fades · Diseños · Color",
   },
   {
-    name: "Carlos",
+    name: "Jesus",
+    role: "Mr. Iconic · Senior Barber",
+    quote: "Fades and beards. That's the whole job.",
+    img: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=1400&q=85",
+    specialty: "Skin Fades · Beard Lineup · Designs",
+  },
+  {
+    name: "Sebastian Tobon",
+    role: "Senior Barber · Station #2",
+    quote: "Si quieres el corte exactamente como lo describes, siéntate aquí.",
+    img: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=1400&q=85",
+    specialty: "Precisión · Fades · Estilos modernos",
+  },
+  {
+    name: "Ben",
+    role: "Master Barber",
+    quote: "Slow hands. Sharp results.",
+    img: "https://images.unsplash.com/photo-1521490683765-fb2b86f0b1e7?auto=format&fit=crop&w=1400&q=85",
+    specialty: "Detalle · Padre & hijo · Clásicos",
+  },
+  {
+    name: "Oscar",
+    role: "Barber",
+    quote: "Silla amigable, trabajo limpio.",
+    img: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1400&q=85",
+    specialty: "Tapers · Barba · Walk-ins",
+  },
+  {
+    name: "TY",
+    role: "Barber",
+    quote: "Mantengo a los clientes regulares siempre on point.",
+    img: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1400&q=85",
+    specialty: "Mantenimiento · Líneas · Clientes semanales",
+  },
+  {
+    name: "Jesus Lopez",
     role: "Senior Barber",
     quote: "La barba es la firma del hombre. La diseño con respeto.",
-    img: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=1400&q=85",
+    img: "https://images.unsplash.com/photo-1593702288056-f173834212f1?auto=format&fit=crop&w=1400&q=85",
     specialty: "Barba · Afeitado clásico",
+  },
+  {
+    name: "Andrés",
+    role: "Barber",
+    quote: "Cada cliente sale como nuevo. Esa es la regla.",
+    img: "https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&fit=crop&w=1400&q=85",
+    specialty: "Cortes urbanos · Texturas · Diseños",
+  },
+  {
+    name: "Miguel",
+    role: "Barber",
+    quote: "Buen corte, buena conversación, buena vibra.",
+    img: "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=1400&q=85",
+    specialty: "Cortes clásicos · Niños · Afeitado",
   },
 ];
 
@@ -31,7 +80,7 @@ export default function Barbers() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="font-sans font-black text-3xl sm:text-4xl lg:text-6xl leading-[1.05] tracking-tight uppercase mb-6">
-              Conoce a nuestros <span className="text-cream">expertos</span>
+              Conoce a nuestros <span className="text-gold">expertos</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
@@ -42,7 +91,7 @@ export default function Barbers() {
           </Reveal>
         </div>
 
-        <RevealGroup className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <RevealGroup className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {barbers.map((b) => (
             <motion.div
               key={b.name}

@@ -100,7 +100,7 @@ export default function Services() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="font-display text-5xl lg:text-7xl leading-[1.02] tracking-tight mb-6">
-              Shaves, Beard <span className="italic-display text-cream">& More</span>
+              Shaves, Beard <span className="italic-display text-gold">& More</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
@@ -151,6 +151,7 @@ export default function Services() {
             </RevealGroup>
           </motion.div>
         </AnimatePresence>
+
       </div>
     </section>
   );

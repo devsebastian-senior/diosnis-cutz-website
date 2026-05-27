@@ -21,8 +21,7 @@ export const SITE = {
     instagramHandle: "@dioniscutz_barbershop",
   },
   hours: [
-    { day: "Lun — Vie", time: "9:00 — 20:00" },
-    { day: "Sábado", time: "9:00 — 21:00" },
-    { day: "Domingo", time: "10:00 — 18:00" },
+    { day: "Lun — Sáb", time: "10:00 AM — 9:00 PM" },
+    { day: "Domingo", time: "12:00 PM — 5:00 PM" },
   ],
 };

@@ -42,7 +42,7 @@ export default function Navbar() {
             height={300}
             priority
             className={`w-auto transition-all duration-500 ${
-              scrolled ? "h-24 lg:h-28" : "h-28 lg:h-40"
+              scrolled ? "h-36 lg:h-44" : "h-44 lg:h-64"
             }`}
           />
         </a>

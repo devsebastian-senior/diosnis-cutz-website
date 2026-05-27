@@ -46,7 +46,7 @@ export default function Reviews() {
           <Reveal delay={0.1}>
             <h2 className="font-sans font-black text-3xl sm:text-4xl lg:text-6xl leading-[1.05] tracking-tight uppercase mb-8">
               Reseñas de clientes —{" "}
-              <span className="text-cream">5-star barbershop</span>
+              <span className="text-gold">5-star barbershop</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>

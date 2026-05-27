@@ -37,7 +37,7 @@ export default function Hero() {
 
       <motion.div
         style={{ opacity }}
-        className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-12 pb-20 lg:pb-32 pt-40"
+        className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-12 pb-20 lg:pb-32 pt-56 lg:pt-72"
       >
         <div className="max-w-3xl">
           <motion.p
@@ -64,7 +64,7 @@ export default function Hero() {
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.45 }}
               className="block"
             >
-              <span className="italic-display text-cream">Stay</span> unstoppable.
+              <span className="italic-display text-gold">Stay</span> unstoppable.
             </motion.span>
           </h1>
 

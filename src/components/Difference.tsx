@@ -5,28 +5,28 @@ import { Reveal, RevealGroup, fadeUp } from "./motion-helpers";
 
 const principles = [
   {
-    title: "Calidad Consistente",
-    desc: "Trabajamos por estándares, no por humor. Cada visita entrega un resultado limpio, profesional y predecible — sin riesgos.",
+    title: "Precisión sin prisa",
+    desc: "Cada corte se toma el tiempo necesario. Sin atajos, sin clientes apurados.",
   },
   {
-    title: "Enfoque Integral",
-    desc: "Consideramos la estructura de tu rostro, estilo de vida e imagen deseada para que el resultado sea intencional y refinado.",
+    title: "Productos premium",
+    desc: "Trabajamos con marcas profesionales que respetan tu piel y cabello.",
   },
   {
-    title: "Barberos Expertos",
-    desc: "Los clientes reservan con barberos específicos. Cada uno trae experiencia, visión y responsabilidad por el resultado.",
+    title: "Ambiente exclusivo",
+    desc: "Espacio diseñado para que te relajes mientras trabajamos en tu look.",
   },
   {
-    title: "Ambiente, no Línea de Producción",
-    desc: "Sin prisa. Sin flujo de cinta. El proceso está diseñado para que te sientas cómodo y en control en cada momento.",
+    title: "Asesoría personal",
+    desc: "Analizamos tu rostro, estilo de vida y rutina para recomendarte lo ideal.",
   },
   {
-    title: "Atención al Detalle",
-    desc: "Interior, iluminación, herramientas, comunicación — todo trabaja en conjunto para crear nivel y comodidad.",
+    title: "Higiene rigurosa",
+    desc: "Herramientas esterilizadas y protocolos estrictos en cada cliente.",
   },
   {
-    title: "Premium sin Exceso",
-    desc: "No creamos presión. Creamos un espacio al que quieras volver. Lujo discreto, no ostentoso.",
+    title: "Resultados garantizados",
+    desc: "Si no estás 100% satisfecho, lo arreglamos. Sin excusas.",
   },
 ];
 
@@ -42,7 +42,7 @@ export default function Difference() {
             <h2 className="font-sans font-black text-3xl sm:text-4xl lg:text-6xl leading-[1.05] tracking-tight uppercase">
               La diferencia Dionis —<br />
               <span>por qué los clientes</span>{" "}
-              <span className="text-cream">nos eligen</span>
+              <span className="text-gold">nos eligen</span>
             </h2>
           </Reveal>
         </div>

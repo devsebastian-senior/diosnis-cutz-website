@@ -3,8 +3,10 @@
 :root {
   --background: #0c0a09;
   --foreground: #f5f5f4;
-  --cream: #efe6d2;
-  --accent: #b8945f;
+  --cream: #CABA57;
+  --accent: #CABA57;
+  --gold-light: #E2D173;
+  --gold-dark: #CABA57;
 }
 
 @theme inline {
@@ -29,6 +31,25 @@ html {
 
 .font-display {
   font-family: var(--font-display), Georgia, serif;
+}
+
+/* Gold gradient text — combina #CABA57 → #E2D173 */
+.text-gold {
+  background: linear-gradient(135deg, #CABA57 0%, #E2D173 50%, #CABA57 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gold gradient background — para badges/elementos sólidos */
+.bg-gold {
+  background: linear-gradient(135deg, #CABA57 0%, #E2D173 50%, #CABA57 100%);
+}
+
+/* Gold gradient border */
+.border-gold {
+  border-image: linear-gradient(135deg, #CABA57, #E2D173) 1;
 }
 
 .italic-display {

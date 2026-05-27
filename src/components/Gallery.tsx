@@ -6,15 +6,14 @@ import { Reveal, RevealGroup, scaleIn } from "./motion-helpers";
 import { SITE } from "@/lib/site";
 
 const images = [
-  "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=85",
-  "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=900&q=85",
-  "https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=900&q=85",
-  "https://images.unsplash.com/photo-1521490683765-fb2b86f0b1e7?auto=format&fit=crop&w=900&q=85",
-  "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=85",
-  "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=900&q=85",
-  "https://images.unsplash.com/photo-1593702288056-f173834212f1?auto=format&fit=crop&w=900&q=85",
-  "https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?auto=format&fit=crop&w=900&q=85",
-  "https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&fit=crop&w=900&q=85",
+  "/gallery/1.jpg",
+  "/gallery/2.jpg",
+  "/gallery/3.jpg",
+  "/gallery/4.jpg",
+  "/gallery/5.jpg",
+  "/gallery/6.jpg",
+  "/gallery/7.jpg",
+  "/gallery/8.jpg",
 ];
 
 const InstagramIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
@@ -36,13 +35,13 @@ export default function Gallery() {
           <Reveal delay={0.1}>
             <h2 className="font-sans font-black text-3xl sm:text-4xl lg:text-6xl leading-[1.05] tracking-tight uppercase">
               Nuestro trabajo —{" "}
-              <span className="text-cream">cortes & estilos</span>
+              <span className="text-gold">cortes & estilos</span>
             </h2>
           </Reveal>
         </div>
 
         <RevealGroup
-          className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mb-16 lg:mb-20"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 mb-16 lg:mb-20"
         >
           {images.map((src, i) => {
             const isHovered = hovered === i;
@@ -53,7 +52,7 @@ export default function Gallery() {
                 variants={scaleIn}
                 onMouseEnter={() => setHovered(i)}
                 onMouseLeave={() => setHovered(null)}
-                className={`relative aspect-square overflow-hidden bg-stone-800 rounded-2xl transition-all duration-500 ease-out ${
+                className={`relative aspect-[2/3] overflow-hidden bg-stone-800 rounded-2xl transition-all duration-500 ease-out ${
                   isHovered ? "scale-[1.04] z-10" : ""
                 } ${isDimmed ? "opacity-50 blur-[3px]" : "opacity-100 blur-0"}`}
               >

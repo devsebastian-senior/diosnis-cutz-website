@@ -32,7 +32,7 @@ export default function ServiceCard({ icon, name, desc, price, duration }: Props
     setTouched(true);
   };
 
-  const background = useMotionTemplate`radial-gradient(400px circle at ${mouseX}px ${mouseY}px, rgba(184, 148, 95, 0.18), transparent 60%)`;
+  const background = useMotionTemplate`radial-gradient(400px circle at ${mouseX}px ${mouseY}px, rgba(202, 186, 87, 0.18), transparent 60%)`;
 
   return (
     <motion.div
@@ -55,7 +55,7 @@ export default function ServiceCard({ icon, name, desc, price, duration }: Props
       />
       <motion.div
         style={{
-          background: useMotionTemplate`radial-gradient(250px circle at ${mouseX}px ${mouseY}px, rgba(184, 148, 95, 0.5), transparent 70%)`,
+          background: useMotionTemplate`radial-gradient(250px circle at ${mouseX}px ${mouseY}px, rgba(202, 186, 87, 0.5), transparent 70%)`,
         }}
         className={`absolute inset-0 rounded-2xl pointer-events-none transition-opacity duration-500 group-hover:opacity-100 ${
           touched ? "opacity-100" : "opacity-0"

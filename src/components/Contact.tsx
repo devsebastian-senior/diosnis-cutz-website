@@ -46,7 +46,7 @@ export default function Contact() {
           <Reveal delay={0.1}>
             <h2 className="font-sans font-black text-3xl sm:text-4xl lg:text-6xl leading-[1.05] tracking-tight uppercase mb-10">
               Visita Dionis Cutz —{" "}
-              <span className="text-cream">North Miami Beach, FL</span>
+              <span className="text-gold">North Miami Beach, FL</span>
             </h2>
           </Reveal>
 
@@ -81,7 +81,7 @@ export default function Contact() {
                   <ClockIcon />
                 </span>
                 <span className="font-light">
-                  L-V 9:00-20:00 · Sáb 9:00-21:00 · Dom 10:00-18:00
+                  L-S 10:00 AM - 9:00 PM · Dom 12:00 PM - 5:00 PM
                 </span>
               </li>
               <li className="flex items-center gap-4 text-stone-200">

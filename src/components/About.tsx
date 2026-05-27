@@ -57,7 +57,7 @@ export default function About() {
                     animate={{
                       width: idx === i ? 28 : 16,
                       backgroundColor:
-                        idx === i ? "#efe6d2" : "rgba(168, 162, 158, 0.4)",
+                        idx === i ? "#CABA57" : "rgba(168, 162, 158, 0.4)",
                     }}
                     transition={{ duration: 0.4 }}
                     className="h-1 rounded-full block"
@@ -78,16 +78,16 @@ export default function About() {
               <br />
               Grooming in
               <br />
-              <span className="text-cream">Tu Ciudad.</span>
+              <span className="text-gold">Tu Ciudad.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
             <p className="text-stone-300 text-base lg:text-lg leading-relaxed font-light mb-12 max-w-xl">
-              Dionis Cutz es una barbería premium. Abierta todos los días de 9 AM a 8
-              PM. Ofrecemos cortes de precisión, afeitado con toalla caliente, diseño
-              de barba, color, manicure y pedicure masculino — todo adaptado a tu
-              cabello, rostro y estilo personal. El grooming en Dionis Cutz es
-              estándar, no rutina.
+              Dionis Cutz es una barbería premium. Abierta de lunes a sábado de
+              10 AM a 9 PM, domingos 12 PM a 5 PM. Ofrecemos cortes de precisión,
+              afeitado con toalla caliente, diseño de barba, color, manicure y
+              pedicure masculino — todo adaptado a tu cabello, rostro y estilo
+              personal. El grooming en Dionis Cutz es estándar, no rutina.
             </p>
           </Reveal>
 

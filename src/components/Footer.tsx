@@ -22,7 +22,7 @@ export default function Footer() {
               alt="Dionis Cutz Barbershop"
               width={300}
               height={300}
-              className="h-40 w-auto mb-6 -ml-4"
+              className="h-64 w-auto mb-6 -ml-4"
             />
             <p className="text-stone-400 font-light leading-relaxed max-w-md">
               Premium barbershop en North Miami Beach. Cortes de precisión, afeitado
