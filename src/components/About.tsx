@@ -5,10 +5,10 @@ import { motion, AnimatePresence } from "motion/react";
 import { Reveal } from "./motion-helpers";
 
 const slides = [
-  "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=85",
-  "https://images.unsplash.com/photo-1521490683765-fb2b86f0b1e7?auto=format&fit=crop&w=1600&q=85",
-  "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1600&q=85",
-  "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=1600&q=85",
+  "/about/1.jpg",
+  "/about/2.jpg",
+  "/about/3.jpg",
+  "/about/4.jpg",
 ];
 
 const features = [

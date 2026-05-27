@@ -64,24 +64,24 @@ type Service = {
 };
 
 const cortes: Service[] = [
-  { icon: <ScissorsIcon />, name: "Corte Regular", desc: "Corte clásico personalizado.", price: "$35", duration: "30 min" },
-  { icon: <ScissorsIcon />, name: "Fade", desc: "Degradado de precisión.", price: "$40", duration: "35 min" },
-  { icon: <RazorIcon />, name: "Corte a Tijera", desc: "Corte completo a tijera.", price: "$45", duration: "40 min" },
-  { icon: <StarIcon />, name: "Corte de Niños", desc: "Para niños de 10 años o menos.", price: "$30", duration: "25 min" },
-  { icon: <BeardIcon />, name: "Línea & Barba", desc: "Perfilado de líneas y barba.", price: "$25", duration: "20 min" },
-  { icon: <CrownIcon />, name: "Corte Regular & Barba", desc: "Corte clásico más barba.", price: "$45", duration: "45 min" },
+  { icon: <ScissorsIcon />, name: "Corte Regular", desc: "Corte clásico con tijera y máquina adaptado a tu estilo y forma de rostro.", price: "$35", duration: "30 min" },
+  { icon: <ScissorsIcon />, name: "Fade", desc: "Degradado limpio — skin, taper, mid o high — diseñado a tu cabeza.", price: "$40", duration: "35 min" },
+  { icon: <RazorIcon />, name: "Corte a Tijera", desc: "Trabajo 100% a tijera para estilos más largos. Más lento, más preciso.", price: "$45", duration: "40 min" },
+  { icon: <StarIcon />, name: "Corte de Niños", desc: "Atención paciente y especializada para clientes de 10 años o menos.", price: "$30", duration: "25 min" },
+  { icon: <BeardIcon />, name: "Línea & Barba", desc: "Mantenimiento entre cortes: lineup, perfilado y arreglo de barba.", price: "$25", duration: "20 min" },
+  { icon: <CrownIcon />, name: "Corte Regular & Barba", desc: "El combo más reservado: corte, lineup y barba en una sola visita.", price: "$45", duration: "45 min" },
 ];
 
 const fullService: Service[] = [
-  { icon: <CrownIcon />, name: "Fade Gold & Barba", desc: "Fade con barba — servicio Gold.", price: "$50", duration: "50 min" },
-  { icon: <StarIcon />, name: "Servicio Completo", desc: "Corte, barba, lavado y detalles.", price: "$75", duration: "75 min" },
-  { icon: <CrownIcon />, name: "Fade Servicio Completo", desc: "Fade completo con todos los extras.", price: "$90", duration: "90 min" },
-  { icon: <DropIcon />, name: "Color de Cabello", desc: "Servicios de color personalizado.", price: "$150+", duration: "120 min" },
+  { icon: <CrownIcon />, name: "Fade Gold & Barba", desc: "Nuestro combo Gold: fade preciso, barba diseñada y toalla caliente al final.", price: "$50", duration: "50 min" },
+  { icon: <StarIcon />, name: "Servicio Completo", desc: "Corte, barba, lavado, toalla caliente, máquina de steam, mascarilla negra y aftershave premium. La experiencia entera.", price: "$75", duration: "75 min" },
+  { icon: <CrownIcon />, name: "Fade Servicio Completo", desc: "Todo lo del Servicio Completo más un fade al milímetro. Steam y mascarilla negra incluidos. Nuestro premium.", price: "$90", duration: "90 min" },
+  { icon: <DropIcon />, name: "Color de Cabello", desc: "Tintes, mechas, blends de canas y diseños personalizados. Consulta previa incluida.", price: "$150+", duration: "120 min" },
 ];
 
 const tabs = [
-  { id: "cortes", label: "Cortes & Barba", data: cortes },
-  { id: "full", label: "Premium & Color", data: fullService },
+  { id: "cortes", label: "Cortes & Barba", labelMobile: "Cortes", data: cortes },
+  { id: "full", label: "Premium & Color", labelMobile: "Premium", data: fullService },
 ];
 
 export default function Services() {
@@ -105,7 +105,8 @@ export default function Services() {
               className="absolute inset-0 bg-cream rounded-full -z-10"
             />
           )}
-          {t.label}
+          <span className="sm:hidden">{t.labelMobile}</span>
+          <span className="hidden sm:inline">{t.label}</span>
         </button>
       ))}
     </div>
