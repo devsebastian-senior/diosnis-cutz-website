@@ -1,5 +1,6 @@
 export const SITE = {
   name: "Dionis Cutz",
+  url: "https://dioniscutzbarbershop.com",
   phone: {
     display: "(786) 859-6242",
     tel: "+17868596242",

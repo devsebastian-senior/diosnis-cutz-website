@@ -52,6 +52,19 @@ html {
   border-image: linear-gradient(135deg, #CABA57, #E2D173) 1;
 }
 
+/* Hide scrollbar but keep scroll functionality */
+.scrollbar-hide,
+.services-scroll {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+.scrollbar-hide::-webkit-scrollbar,
+.services-scroll::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
 .italic-display {
   font-family: var(--font-display), Georgia, serif;
   font-style: italic;

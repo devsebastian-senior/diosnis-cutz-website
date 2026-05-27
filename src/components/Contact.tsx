@@ -41,7 +41,7 @@ export default function Contact() {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div>
           <Reveal>
-            <p className="eyebrow text-stone-400 mb-6">Find us</p>
+            <p className="eyebrow text-stone-400 mb-6">Visítanos</p>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="font-sans font-black text-3xl sm:text-4xl lg:text-6xl leading-[1.05] tracking-tight uppercase mb-10">
@@ -88,7 +88,7 @@ export default function Contact() {
                 <span className="text-cream flex-shrink-0">
                   <UsersIcon />
                 </span>
-                <span className="font-light">Walk-ins welcome</span>
+                <span className="font-light">Sin cita previa, bienvenido</span>
               </li>
               <li className="flex items-center gap-4 text-stone-200">
                 <span className="text-cream flex-shrink-0">
@@ -100,7 +100,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="hover:text-cream font-light"
                 >
-                  Follow {SITE.social.instagramHandle}
+                  Síguenos {SITE.social.instagramHandle}
                 </a>
               </li>
             </ul>
@@ -116,7 +116,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="bg-white text-stone-950 px-10 py-5 rounded-full text-xs uppercase tracking-[0.25em] font-bold hover:bg-stone-100 transition-colors text-center"
               >
-                Book Online
+                Reservar
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.03 }}
@@ -125,7 +125,7 @@ export default function Contact() {
                 className="border border-stone-500 text-stone-100 hover:border-cream hover:text-cream px-10 py-5 rounded-full text-xs uppercase tracking-[0.25em] font-bold transition-colors flex items-center justify-center gap-2.5"
               >
                 <PhoneIcon className="w-4 h-4" />
-                Call Now
+                Llamar Ahora
               </motion.a>
             </div>
           </Reveal>

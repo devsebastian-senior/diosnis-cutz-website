@@ -32,7 +32,7 @@ export default function ServiceCard({ icon, name, desc, price, duration }: Props
     setTouched(true);
   };
 
-  const background = useMotionTemplate`radial-gradient(400px circle at ${mouseX}px ${mouseY}px, rgba(202, 186, 87, 0.18), transparent 60%)`;
+  const background = useMotionTemplate`radial-gradient(500px circle at ${mouseX}px ${mouseY}px, rgba(226, 209, 115, 0.45), rgba(202, 186, 87, 0.2) 35%, transparent 70%)`;
 
   return (
     <motion.div
@@ -55,7 +55,7 @@ export default function ServiceCard({ icon, name, desc, price, duration }: Props
       />
       <motion.div
         style={{
-          background: useMotionTemplate`radial-gradient(250px circle at ${mouseX}px ${mouseY}px, rgba(202, 186, 87, 0.5), transparent 70%)`,
+          background: useMotionTemplate`radial-gradient(320px circle at ${mouseX}px ${mouseY}px, rgba(226, 209, 115, 1), rgba(202, 186, 87, 0.8) 50%, transparent 75%)`,
         }}
         className={`absolute inset-0 rounded-2xl pointer-events-none transition-opacity duration-500 group-hover:opacity-100 ${
           touched ? "opacity-100" : "opacity-0"
@@ -87,7 +87,7 @@ export default function ServiceCard({ icon, name, desc, price, duration }: Props
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-bold text-stone-200 hover:text-cream group-active:text-cream transition-colors"
         >
-          Book This Service
+          Reservar Servicio
           <span className="transition-transform group-hover:translate-x-1 group-active:translate-x-1">→</span>
         </a>
       </div>

@@ -25,10 +25,10 @@ export default function Hero() {
         className="absolute inset-0 bg-cover bg-center scale-110"
       >
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=2400&q=85')",
+            backgroundImage: "url('/background/herobackground.jpg')",
+            backgroundPosition: "center 15%",
           }}
         />
       </motion.div>
@@ -46,7 +46,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="eyebrow text-cream mb-8"
           >
-            Premium Barbershop · Est. 2020
+            Barbería Premium · Est. 2020
           </motion.p>
 
           <h1 className="font-display font-medium text-[3.5rem] sm:text-7xl lg:text-[7.5rem] leading-[0.95] mb-8 tracking-tight overflow-hidden">
@@ -56,7 +56,7 @@ export default function Hero() {
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
               className="block"
             >
-              Look sharp.
+              Tu corte.
             </motion.span>
             <motion.span
               initial={{ y: 120 }}
@@ -64,7 +64,7 @@ export default function Hero() {
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.45 }}
               className="block"
             >
-              <span className="italic-display text-gold">Stay</span> unstoppable.
+              <span className="italic-display text-gold">Tu</span> sello.
             </motion.span>
           </h1>
 
@@ -92,7 +92,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="bg-white text-stone-950 px-10 py-5 rounded-full text-xs uppercase tracking-[0.25em] font-bold hover:bg-stone-100 transition-colors text-center"
             >
-              Book Online
+              Reservar
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.03 }}
@@ -101,7 +101,7 @@ export default function Hero() {
               className="border border-stone-400/60 text-stone-100 px-10 py-5 rounded-full text-xs uppercase tracking-[0.25em] font-bold hover:border-cream hover:text-cream transition-colors flex items-center justify-center gap-2.5"
             >
               <PhoneIcon className="w-4 h-4" />
-              Call {SITE.phone.display}
+              Llamar {SITE.phone.display}
             </motion.a>
           </motion.div>
 
@@ -125,7 +125,7 @@ export default function Hero() {
                 </motion.svg>
               ))}
             </div>
-            <span className="font-light tracking-wide">5.0 on Google · +200 clientes</span>
+            <span className="font-light tracking-wide">5.0 en Google · +200 clientes</span>
           </motion.div>
         </div>
       </motion.div>
@@ -136,7 +136,7 @@ export default function Hero() {
         transition={{ duration: 1, delay: 1.5 }}
         className="absolute bottom-8 right-8 hidden lg:flex flex-col items-end gap-2 text-stone-400 text-xs uppercase tracking-[0.3em]"
       >
-        <span>Scroll</span>
+        <span>Bajar</span>
         <motion.div
           animate={{ scaleY: [0.3, 1, 0.3] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}

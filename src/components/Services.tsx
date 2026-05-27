@@ -64,29 +64,52 @@ type Service = {
 };
 
 const cortes: Service[] = [
-  { icon: <ScissorsIcon />, name: "Regular Cut", desc: "Corte clásico personalizado.", price: "$35", duration: "30 min" },
+  { icon: <ScissorsIcon />, name: "Corte Regular", desc: "Corte clásico personalizado.", price: "$35", duration: "30 min" },
   { icon: <ScissorsIcon />, name: "Fade", desc: "Degradado de precisión.", price: "$40", duration: "35 min" },
-  { icon: <RazorIcon />, name: "Scissors Cut", desc: "Corte completo a tijera.", price: "$45", duration: "40 min" },
-  { icon: <StarIcon />, name: "Kids Haircut", desc: "Corte para niños 10 años o menos.", price: "$30", duration: "25 min" },
-  { icon: <BeardIcon />, name: "Only Tape & Beard", desc: "Perfilado de líneas y barba.", price: "$25", duration: "20 min" },
-  { icon: <CrownIcon />, name: "Regular Cut & Beard", desc: "Corte clásico más barba.", price: "$45", duration: "45 min" },
+  { icon: <RazorIcon />, name: "Corte a Tijera", desc: "Corte completo a tijera.", price: "$45", duration: "40 min" },
+  { icon: <StarIcon />, name: "Corte de Niños", desc: "Para niños de 10 años o menos.", price: "$30", duration: "25 min" },
+  { icon: <BeardIcon />, name: "Línea & Barba", desc: "Perfilado de líneas y barba.", price: "$25", duration: "20 min" },
+  { icon: <CrownIcon />, name: "Corte Regular & Barba", desc: "Corte clásico más barba.", price: "$45", duration: "45 min" },
 ];
 
 const fullService: Service[] = [
-  { icon: <CrownIcon />, name: "Gold Fade & Beard", desc: "Fade con barba — Gold service.", price: "$50", duration: "50 min" },
-  { icon: <StarIcon />, name: "Full Service", desc: "Corte, barba, lavado y detalles.", price: "$75", duration: "75 min" },
-  { icon: <CrownIcon />, name: "Fade Full Service", desc: "Fade completo con todos los extras.", price: "$90", duration: "90 min" },
-  { icon: <DropIcon />, name: "Hair Color", desc: "Servicios de color personalizado.", price: "$150+", duration: "120 min" },
+  { icon: <CrownIcon />, name: "Fade Gold & Barba", desc: "Fade con barba — servicio Gold.", price: "$50", duration: "50 min" },
+  { icon: <StarIcon />, name: "Servicio Completo", desc: "Corte, barba, lavado y detalles.", price: "$75", duration: "75 min" },
+  { icon: <CrownIcon />, name: "Fade Servicio Completo", desc: "Fade completo con todos los extras.", price: "$90", duration: "90 min" },
+  { icon: <DropIcon />, name: "Color de Cabello", desc: "Servicios de color personalizado.", price: "$150+", duration: "120 min" },
 ];
 
 const tabs = [
   { id: "cortes", label: "Cortes & Barba", data: cortes },
-  { id: "full", label: "Full Service & Color", data: fullService },
+  { id: "full", label: "Premium & Color", data: fullService },
 ];
 
 export default function Services() {
   const [active, setActive] = useState("cortes");
   const current = tabs.find((t) => t.id === active)!;
+
+  const TabsBar = (
+    <div className="relative inline-flex rounded-full border border-stone-800 bg-stone-900/80 backdrop-blur p-1 shadow-2xl max-w-full">
+      {tabs.map((t) => (
+        <button
+          key={t.id}
+          onClick={() => setActive(t.id)}
+          className={`relative px-4 sm:px-6 lg:px-8 py-3 rounded-full text-[10px] sm:text-xs uppercase tracking-[0.12em] sm:tracking-[0.2em] font-bold transition-colors z-10 whitespace-nowrap ${
+            active === t.id ? "text-stone-950" : "text-stone-300 hover:text-cream"
+          }`}
+        >
+          {active === t.id && (
+            <motion.span
+              layoutId="tab-bg"
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              className="absolute inset-0 bg-cream rounded-full -z-10"
+            />
+          )}
+          {t.label}
+        </button>
+      ))}
+    </div>
+  );
 
   return (
     <section
@@ -100,7 +123,7 @@ export default function Services() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="font-display text-5xl lg:text-7xl leading-[1.02] tracking-tight mb-6">
-              Shaves, Beard <span className="italic-display text-gold">& More</span>
+              Afeitado, Barba <span className="italic-display text-gold">& Más</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
@@ -111,46 +134,42 @@ export default function Services() {
           </Reveal>
         </div>
 
-        <Reveal delay={0.3} className="flex justify-center mb-16">
-          <div className="relative inline-flex rounded-full border border-stone-800 bg-stone-900/60 p-1">
-            {tabs.map((t) => (
-              <button
-                key={t.id}
-                onClick={() => setActive(t.id)}
-                className={`relative px-6 lg:px-8 py-3 rounded-full text-xs uppercase tracking-[0.2em] font-bold transition-colors z-10 ${
-                  active === t.id ? "text-stone-950" : "text-stone-300 hover:text-cream"
-                }`}
-              >
-                {active === t.id && (
-                  <motion.span
-                    layoutId="tab-bg"
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                    className="absolute inset-0 bg-cream rounded-full -z-10"
-                  />
-                )}
-                {t.label}
-              </button>
-            ))}
-          </div>
-        </Reveal>
+        <div className="flex justify-center mb-8 lg:mb-12">
+          {TabsBar}
+        </div>
 
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={active}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
+        <div className="relative">
+          {/* Fades solo mobile */}
+          <div className="lg:hidden absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-stone-950 to-transparent z-10 pointer-events-none" />
+          <div className="lg:hidden absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-stone-950 to-transparent z-10 pointer-events-none" />
+
+          <div
+            className="services-scroll max-h-[70vh] overflow-y-auto overscroll-contain rounded-2xl lg:max-h-none lg:overflow-visible lg:overscroll-auto"
+            style={{
+              msOverflowStyle: "none",
+              scrollbarWidth: "none",
+            }}
           >
-            <RevealGroup className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
-              {current.data.map((s) => (
-                <motion.div key={s.name} variants={fadeUp}>
-                  <ServiceCard {...s} />
-                </motion.div>
-              ))}
-            </RevealGroup>
-          </motion.div>
-        </AnimatePresence>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={active}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.4 }}
+                className="py-4 px-1"
+              >
+                <RevealGroup className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+                  {current.data.map((s) => (
+                    <motion.div key={s.name} variants={fadeUp}>
+                      <ServiceCard {...s} />
+                    </motion.div>
+                  ))}
+                </RevealGroup>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </div>
 
       </div>
     </section>

@@ -19,7 +19,7 @@ export default function MobileCTABar() {
           className="flex-1 border border-stone-600 text-stone-100 active:bg-stone-800 px-4 py-3.5 rounded-full text-xs uppercase tracking-[0.2em] font-bold flex items-center justify-center gap-2"
         >
           <PhoneIcon className="w-3.5 h-3.5" />
-          Call
+          Llamar
         </motion.a>
         <motion.a
           whileTap={{ scale: 0.95 }}
@@ -28,7 +28,7 @@ export default function MobileCTABar() {
           rel="noopener noreferrer"
           className="flex-1 bg-white text-stone-950 active:bg-stone-200 px-4 py-3.5 rounded-full text-xs uppercase tracking-[0.2em] font-bold text-center"
         >
-          Book Online
+          Reservar
         </motion.a>
       </div>
     </motion.div>

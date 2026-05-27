@@ -73,7 +73,7 @@ export default function Gallery() {
               <InstagramIcon className="w-6 h-6 text-stone-100" />
             </div>
             <h3 className="font-sans font-black text-2xl lg:text-3xl uppercase tracking-tight mb-3">
-              Más en Instagram
+              Síguenos en Instagram
             </h3>
             <p className="text-stone-400 font-light mb-8">
               Cortes frescos, transformaciones e inspiración diaria.

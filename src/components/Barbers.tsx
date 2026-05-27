@@ -6,67 +6,44 @@ import { SITE } from "@/lib/site";
 
 const barbers = [
   {
-    name: "Dionis Lopez",
-    role: "Master Barber · Founder",
+    name: "Dionis",
+    role: "Maestro Barbero · Fundador",
     quote: "Cada corte cuenta una historia. Mi trabajo es escribirla bien.",
-    img: "https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?auto=format&fit=crop&w=1400&q=85",
+    img: "/barbers/dionis.jpg",
     specialty: "Fades · Diseños · Color",
+    bookingUrl: "https://booksy.com/en-us/1555912_dioniscutz_barber-shop_15889_miami#ba_s=seo",
   },
   {
-    name: "Jesus",
-    role: "Mr. Iconic · Senior Barber",
-    quote: "Fades and beards. That's the whole job.",
-    img: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=1400&q=85",
-    specialty: "Skin Fades · Beard Lineup · Designs",
+    name: "Jesus Mr Iconicutz",
+    role: "Barbero Senior",
+    quote: "Fades y barbas. Ese es todo el trabajo.",
+    img: "/barbers/Mriconicutz.jpg",
+    specialty: "Fades · Línea de Barba · Diseños",
+    bookingUrl: "https://booksy.com/en-us/910914_mr-iconic-cutz_barber-shop_15889_miami",
   },
   {
     name: "Sebastian Tobon",
-    role: "Senior Barber · Station #2",
+    role: "Barbero Senior · Estación #2",
     quote: "Si quieres el corte exactamente como lo describes, siéntate aquí.",
-    img: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=1400&q=85",
+    img: "/barbers/sebastian.jpg",
     specialty: "Precisión · Fades · Estilos modernos",
-  },
-  {
-    name: "Ben",
-    role: "Master Barber",
-    quote: "Slow hands. Sharp results.",
-    img: "https://images.unsplash.com/photo-1521490683765-fb2b86f0b1e7?auto=format&fit=crop&w=1400&q=85",
-    specialty: "Detalle · Padre & hijo · Clásicos",
-  },
-  {
-    name: "Oscar",
-    role: "Barber",
-    quote: "Silla amigable, trabajo limpio.",
-    img: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1400&q=85",
-    specialty: "Tapers · Barba · Walk-ins",
-  },
-  {
-    name: "TY",
-    role: "Barber",
-    quote: "Mantengo a los clientes regulares siempre on point.",
-    img: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1400&q=85",
-    specialty: "Mantenimiento · Líneas · Clientes semanales",
+    bookingUrl: "tel:+14077938183",
   },
   {
     name: "Jesus Lopez",
-    role: "Senior Barber",
+    role: "Barbero Senior",
     quote: "La barba es la firma del hombre. La diseño con respeto.",
-    img: "https://images.unsplash.com/photo-1593702288056-f173834212f1?auto=format&fit=crop&w=1400&q=85",
+    img: "/barbers/jesuslopez.jpg",
     specialty: "Barba · Afeitado clásico",
+    bookingUrl: "https://booksy.com/en-us/1093810_jesusbarberr_barber-shop_15889_miami",
   },
   {
-    name: "Andrés",
+    name: "Juan",
     role: "Barber",
     quote: "Cada cliente sale como nuevo. Esa es la regla.",
-    img: "https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&fit=crop&w=1400&q=85",
+    img: "/barbers/juan.jpg",
     specialty: "Cortes urbanos · Texturas · Diseños",
-  },
-  {
-    name: "Miguel",
-    role: "Barber",
-    quote: "Buen corte, buena conversación, buena vibra.",
-    img: "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=1400&q=85",
-    specialty: "Cortes clásicos · Niños · Afeitado",
+    bookingUrl: "https://booksy.com/en-us/1555909_kindocutz_barber-shop_15889_miami",
   },
 ];
 
@@ -76,7 +53,7 @@ export default function Barbers() {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className="text-center mb-16 lg:mb-20 max-w-3xl mx-auto">
           <Reveal>
-            <p className="eyebrow text-stone-400 mb-6">Meet the team</p>
+            <p className="eyebrow text-stone-400 mb-6">Conoce el equipo</p>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="font-sans font-black text-3xl sm:text-4xl lg:text-6xl leading-[1.05] tracking-tight uppercase mb-6">
@@ -107,7 +84,7 @@ export default function Barbers() {
                   transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                   src={b.img}
                   alt={b.name}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover lg:grayscale lg:group-hover:grayscale-0 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent pointer-events-none" />
               </div>
@@ -127,12 +104,12 @@ export default function Barbers() {
                 <motion.a
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  href={SITE.booking.url}
+                  href={b.bookingUrl ?? SITE.booking.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-white text-stone-950 px-6 py-4 rounded-full text-xs uppercase tracking-[0.25em] font-bold hover:bg-stone-100 transition-colors text-center"
                 >
-                  Book with {b.name}
+                  Reservar con {b.name}
                 </motion.a>
               </div>
             </motion.div>

@@ -70,15 +70,15 @@ export default function About() {
 
         <div>
           <Reveal>
-            <p className="eyebrow text-stone-400 mb-6">About Dionis Cutz</p>
+            <p className="eyebrow text-stone-400 mb-6">Sobre Dionis Cutz</p>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="font-sans font-black text-4xl lg:text-6xl leading-[1.05] tracking-tight uppercase mb-8">
-              Premium Men&apos;s
+              Barbería Premium
               <br />
-              Grooming in
+              en
               <br />
-              <span className="text-gold">Tu Ciudad.</span>
+              <span className="text-gold">North Miami Beach.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>

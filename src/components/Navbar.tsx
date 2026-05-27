@@ -6,12 +6,12 @@ import PhoneIcon from "./ui/PhoneIcon";
 import { SITE } from "@/lib/site";
 
 const links = [
-  { href: "#servicios", label: "Services" },
-  { href: "#barberos", label: "Our Barbers" },
-  { href: "#galeria", label: "Gallery" },
-  { href: "#reseñas", label: "Reviews" },
+  { href: "#servicios", label: "Servicios" },
+  { href: "#barberos", label: "Barberos" },
+  { href: "#galeria", label: "Galería" },
+  { href: "#reseñas", label: "Reseñas" },
   { href: "#faq", label: "FAQ" },
-  { href: "#contacto", label: "Contact" },
+  { href: "#contacto", label: "Contacto" },
 ];
 
 export default function Navbar() {
@@ -66,14 +66,14 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="bg-white text-stone-950 px-7 py-3.5 rounded-full text-xs uppercase tracking-[0.2em] font-bold hover:bg-stone-100 transition-colors"
           >
-            Book Online
+            Reservar
           </a>
           <a
             href={`tel:${SITE.phone.tel}`}
             className="border border-stone-500 text-stone-100 px-6 py-3.5 rounded-full text-xs uppercase tracking-[0.2em] font-bold hover:border-cream hover:text-cream transition-colors flex items-center gap-2"
           >
             <PhoneIcon className="w-3.5 h-3.5" />
-            Call
+            Llamar
           </a>
         </div>
 
@@ -120,7 +120,7 @@ export default function Navbar() {
                 onClick={() => setOpen(false)}
                 className="flex-1 bg-white text-stone-950 px-6 py-4 rounded-full text-xs uppercase tracking-[0.2em] font-bold text-center"
               >
-                Book Online
+                Reservar
               </a>
               <a
                 href={`tel:${SITE.phone.tel}`}
@@ -128,7 +128,7 @@ export default function Navbar() {
                 className="flex-1 border border-stone-500 text-stone-100 px-6 py-4 rounded-full text-xs uppercase tracking-[0.2em] font-bold flex items-center justify-center gap-2"
               >
                 <PhoneIcon className="w-3.5 h-3.5" />
-                Call
+                Llamar
               </a>
             </div>
           </nav>

@@ -41,12 +41,12 @@ export default function Reviews() {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 mb-16 lg:mb-20">
         <div className="text-center max-w-4xl mx-auto">
           <Reveal>
-            <p className="eyebrow text-stone-400 mb-6">Client reviews</p>
+            <p className="eyebrow text-stone-400 mb-6">Reseñas de clientes</p>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="font-sans font-black text-3xl sm:text-4xl lg:text-6xl leading-[1.05] tracking-tight uppercase mb-8">
               Reseñas de clientes —{" "}
-              <span className="text-gold">5-star barbershop</span>
+              <span className="text-gold">5 estrellas</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
@@ -58,7 +58,7 @@ export default function Reviews() {
                   </svg>
                 ))}
               </div>
-              <span className="text-sm font-medium text-stone-100">5.0 on Google</span>
+              <span className="text-sm font-medium text-stone-100">5.0 en Google</span>
             </div>
           </Reveal>
         </div>

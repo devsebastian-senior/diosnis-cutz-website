@@ -1,10 +1,10 @@
 const items = [
-  "Hair",
-  "Beard",
-  "Shave",
-  "Design",
+  "Cabello",
+  "Barba",
+  "Afeitado",
+  "Diseño",
   "Color",
-  "Kids",
+  "Niños",
 ];
 
 export default function Marquee() {
