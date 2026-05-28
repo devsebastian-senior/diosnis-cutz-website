@@ -84,9 +84,9 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 text-xs text-stone-500 uppercase tracking-[0.2em]">
-          <p>© {year} Dionis Cutz · Todos los derechos reservados</p>
+          <p>© {year} Dionis Cutz Barbershop · Todos los derechos reservados</p>
           <p className="font-light normal-case tracking-normal">
-            Diseñado por Sebastian Tobon.
+            Desarollado por Sebastian Tobon.
           </p>
         </div>
       </div>

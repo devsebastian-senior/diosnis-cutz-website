@@ -18,8 +18,8 @@ export const SITE = {
     url: "https://booksy.com/en-us/1555912_dioniscutz_barber-shop_15889_miami#ba_s=seo",
   },
   social: {
-    instagram: "https://www.instagram.com/dioniscutz_barbershop/",
-    instagramHandle: "@dioniscutz_barbershop",
+    instagram: "https://www.instagram.com/dionis_cutz_barbershop/",
+    instagramHandle: "@dionis_cutz_barbershop",
   },
   hours: [
     { day: "Lun — Sáb", time: "10:00 AM — 9:00 PM" },

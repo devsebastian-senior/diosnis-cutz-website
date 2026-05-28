@@ -69,7 +69,6 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  icons: { icon: "/logo.png", apple: "/logo.png" },
   category: "barbershop",
   formatDetection: {
     telephone: true,
