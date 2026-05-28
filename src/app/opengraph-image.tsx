@@ -53,7 +53,7 @@ export default async function Image() {
         >
           <div
             style={{
-              fontSize: 180,
+              fontSize: 160,
               fontWeight: 800,
               letterSpacing: "-0.02em",
               color: "#ffffff",
@@ -64,7 +64,7 @@ export default async function Image() {
           </div>
           <div
             style={{
-              fontSize: 180,
+              fontSize: 160,
               fontWeight: 800,
               letterSpacing: "-0.02em",
               fontStyle: "italic",
@@ -76,6 +76,44 @@ export default async function Image() {
             }}
           >
             CUTZ.
+          </div>
+        </div>
+
+        {/* CTA badge */}
+        <div
+          style={{
+            display: "flex",
+            marginTop: 30,
+            alignItems: "center",
+            gap: 14,
+            fontFamily: "Inter, sans-serif",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              padding: "16px 32px",
+              background:
+                "linear-gradient(135deg, #CABA57 0%, #E2D173 50%, #CABA57 100%)",
+              color: "#0c0a09",
+              borderRadius: 9999,
+              fontSize: 22,
+              fontWeight: 800,
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+            }}
+          >
+            Reserva en Booksy →
+          </div>
+          <div
+            style={{
+              display: "flex",
+              fontSize: 18,
+              color: "#a8a29e",
+              letterSpacing: "0.05em",
+            }}
+          >
+            Llama (786) 859-6242
           </div>
         </div>
 
@@ -118,7 +156,7 @@ export default async function Image() {
                 display: "flex",
               }}
             >
-              dioniscutzbarbershop.com · (786) 859-6242
+              dioniscutzbarbershop.com
             </div>
           </div>
 

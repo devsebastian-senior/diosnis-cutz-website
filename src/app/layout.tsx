@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 });
 
 const description =
-  "Barbería premium en North Miami Beach. Cortes de precisión, fades, afeitado clásico y diseño de barba. 5.0 en Google. Reserva tu cita en Booksy. 1364 NE 163rd St. (786) 859-6242.";
+  "Barbería premium en North Miami Beach. Fades, afeitado clásico y diseño de barba. 5.0 en Google. Reserva en Booksy o llama (786) 859-6242.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
